@@ -13,7 +13,8 @@ namespace Vidly.Controllers
     {
         private ApplicationDbContext _context;
 
-        private CustomersController() {
+        public CustomersController()
+        {
             _context = new ApplicationDbContext();
 
         }
@@ -22,6 +23,9 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
+
+
 
         private IEnumerable<Customer> Getcustomer()
         {
@@ -43,13 +47,15 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
 
-            var viewmodel = new CustomerModels
-            {
-                Customer = Getcustomer2()
+            //var viewmodel = new CustomerModels
+            //{
+            //    Customer = Getcustomer2()
 
-            };
-            var customers = Getcustomer();
-            return View(viewmodel);
+            //};
+            //var customers = Getcustomer();
+
+            var customers = _context.Customers.ToList();
+            return View(customers);
         }
 
 
@@ -64,6 +70,6 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
-       
+
     }
 }
