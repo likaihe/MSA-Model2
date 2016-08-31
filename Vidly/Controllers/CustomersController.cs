@@ -6,24 +6,33 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 
+
 namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customer
+        private ApplicationDbContext _context;
 
-        //public List<Customer> getcustomer()
-        //{
-        //    var customer = new List<Customer> {
-        //        new Customer {Name="likai1",Id =1 },
-        //        new Customer {Name="likai2",Id =2 },
-        //   };
-        //    return customer;
+        private CustomersController() {
+            _context = new ApplicationDbContext();
 
+        }
 
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
-        private List<Customer> getcustomer()
+        private IEnumerable<Customer> Getcustomer()
+        {
+            return new List<Customer>
+             {
+                new Customer { Id = 1, Name = "John Smith" },
+                new Customer { Id = 2, Name = "Mary Williams" }
+            };
+        }
+
+        private List<Customer> Getcustomer2()
         {
             return new List<Customer>
              {
@@ -34,20 +43,20 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
 
-            var ViewModel = new CustomerModels
+            var viewmodel = new CustomerModels
             {
-                Customer = getcustomer()
+                Customer = Getcustomer2()
 
             };
-            var customers = getcustomer();
-            return View(ViewModel);
+            var customers = Getcustomer();
+            return View(viewmodel);
         }
 
 
         public ActionResult Details(int id)
         {
 
-            var customer = getcustomer().SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
                 return HttpNotFound();
