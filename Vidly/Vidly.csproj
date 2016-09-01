@@ -175,41 +175,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608291317122_InitialModel.cs" />
-    <Compile Include="Migrations\201608291317122_InitialModel.Designer.cs">
-      <DependentUpon>201608291317122_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201609011307535_init.cs" />
+    <Compile Include="Migrations\201609011307535_init.Designer.cs">
+      <DependentUpon>201609011307535_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608300136099_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\201608300136099_AddIsSubscribedToCustomer.Designer.cs">
-      <DependentUpon>201608300136099_AddIsSubscribedToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608300229126_AddMembershipType3.cs" />
-    <Compile Include="Migrations\201608300229126_AddMembershipType3.Designer.cs">
-      <DependentUpon>201608300229126_AddMembershipType3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608300234541_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\201608300234541_PopulateMembershipTypes.Designer.cs">
-      <DependentUpon>201608300234541_PopulateMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608300313584_ApplyAnnotations.cs" />
-    <Compile Include="Migrations\201608300313584_ApplyAnnotations.Designer.cs">
-      <DependentUpon>201608300313584_ApplyAnnotations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609010300267_addName.cs" />
-    <Compile Include="Migrations\201609010300267_addName.Designer.cs">
-      <DependentUpon>201609010300267_addName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609010326347_addBirthday.cs" />
-    <Compile Include="Migrations\201609010326347_addBirthday.Designer.cs">
-      <DependentUpon>201609010326347_addBirthday.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609011154327_test.cs" />
-    <Compile Include="Migrations\201609011154327_test.Designer.cs">
-      <DependentUpon>201609011154327_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609011156075_test1.cs" />
-    <Compile Include="Migrations\201609011156075_test1.Designer.cs">
-      <DependentUpon>201609011156075_test1.cs</DependentUpon>
+    <Compile Include="Migrations\201609011310051_test.cs" />
+    <Compile Include="Migrations\201609011310051_test.Designer.cs">
+      <DependentUpon>201609011310051_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -296,32 +268,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608291317122_InitialModel.resx">
-      <DependentUpon>201608291317122_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609011307535_init.resx">
+      <DependentUpon>201609011307535_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608300136099_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>201608300136099_AddIsSubscribedToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608300229126_AddMembershipType3.resx">
-      <DependentUpon>201608300229126_AddMembershipType3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608300234541_PopulateMembershipTypes.resx">
-      <DependentUpon>201608300234541_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608300313584_ApplyAnnotations.resx">
-      <DependentUpon>201608300313584_ApplyAnnotations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609010300267_addName.resx">
-      <DependentUpon>201609010300267_addName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609010326347_addBirthday.resx">
-      <DependentUpon>201609010326347_addBirthday.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609011154327_test.resx">
-      <DependentUpon>201609011154327_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609011156075_test1.resx">
-      <DependentUpon>201609011156075_test1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609011310051_test.resx">
+      <DependentUpon>201609011310051_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
