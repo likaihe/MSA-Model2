@@ -195,6 +195,14 @@
     <Compile Include="Migrations\201608300313584_ApplyAnnotations.Designer.cs">
       <DependentUpon>201608300313584_ApplyAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609010300267_addName.cs" />
+    <Compile Include="Migrations\201609010300267_addName.Designer.cs">
+      <DependentUpon>201609010300267_addName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609010326347_addBirthday.cs" />
+    <Compile Include="Migrations\201609010326347_addBirthday.Designer.cs">
+      <DependentUpon>201609010326347_addBirthday.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -295,6 +303,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608300313584_ApplyAnnotations.resx">
       <DependentUpon>201608300313584_ApplyAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609010300267_addName.resx">
+      <DependentUpon>201609010300267_addName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609010326347_addBirthday.resx">
+      <DependentUpon>201609010326347_addBirthday.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

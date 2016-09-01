@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 
 namespace Vidly.Controllers
@@ -27,42 +28,28 @@ namespace Vidly.Controllers
 
 
 
-        private IEnumerable<Customer> Getcustomer()
-        {
-            return new List<Customer>
-             {
-                new Customer { Id = 1, Name = "John Smith" },
-                new Customer { Id = 2, Name = "Mary Williams" }
-            };
-        }
+        //private IEnumerable<Customer> Getcustomer()
+        //{
+        //    return new List<Customer>
+        //     {
+        //        new Customer { Id = 1, Name = "John Smith" },
+        //        new Customer { Id = 2, Name = "Mary Williams" }
+        //    };
+        //}
 
-        private List<Customer> Getcustomer2()
-        {
-            return new List<Customer>
-             {
-                new Customer { Id = 1, Name = "John Smith" },
-                new Customer { Id = 2, Name = "Mary Williams" }
-            };
-        }
+
         public ActionResult Index()
         {
 
-            //var viewmodel = new CustomerModels
-            //{
-            //    Customer = Getcustomer2()
 
-            //};
-            //var customers = Getcustomer();
-
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c =>c.MembershipeType).ToList();
             return View(customers);
         }
 
 
         public ActionResult Details(int id)
         {
-
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipeType).SingleOrDefault(c => c.Id == id); ;
 
             if (customer == null)
                 return HttpNotFound();

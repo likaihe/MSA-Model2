@@ -3,11 +3,29 @@
     ViewBag.Title = "Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<ul>
-    @foreach (var customer in Model)
-    {
-        <li>@Html.ActionLink(@customer.Name, "details", "Customers", new { id = customer.Id }, null)</li>
-    }
 
-</ul>
+
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+            {
+        <tr>
+            <td>@Html.ActionLink(@customer.Name, "details", "Customers", new { id = customer.Id }, null)</td>
+            <td>@customer.MembershipeType.Nmae</td>
+        </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
 
