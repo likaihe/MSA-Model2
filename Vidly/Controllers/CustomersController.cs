@@ -28,14 +28,6 @@ namespace Vidly.Controllers
 
 
 
-        //private IEnumerable<Customer> Getcustomer()
-        //{
-        //    return new List<Customer>
-        //     {
-        //        new Customer { Id = 1, Name = "John Smith" },
-        //        new Customer { Id = 2, Name = "Mary Williams" }
-        //    };
-        //}
 
 
         public ActionResult Index()
