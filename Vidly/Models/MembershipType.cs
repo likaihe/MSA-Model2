@@ -11,6 +11,6 @@ namespace Vidly.Models
         public short SingupFee { get; set; }
         public byte DurationMonth { get; set; }
         public byte Discount { get; set; }
-        public String Nmae { get; set; }
+        public String Name { get; set; }
     }
 }
