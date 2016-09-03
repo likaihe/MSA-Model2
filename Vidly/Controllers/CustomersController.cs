@@ -26,10 +26,6 @@ namespace Vidly.Controllers
         }
 
 
-
-
-
-
         public ActionResult Index()
         {
 
@@ -43,7 +39,8 @@ namespace Vidly.Controllers
             var membershiptype = _context.MembershipType.ToList();
 
             var ViewModel = new CustomerFormViewModel() {
-                MembershipTypes = membershiptype
+                MembershipTypes = membershiptype,
+                
             };
             return View("CustomerFrom",ViewModel);
         }
