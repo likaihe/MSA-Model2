@@ -183,6 +183,18 @@
     <Compile Include="Migrations\201609021104312_ChangeName.Designer.cs">
       <DependentUpon>201609021104312_ChangeName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609031109355_addGenre.cs" />
+    <Compile Include="Migrations\201609031109355_addGenre.Designer.cs">
+      <DependentUpon>201609031109355_addGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609031119322_addGenre1.cs" />
+    <Compile Include="Migrations\201609031119322_addGenre1.Designer.cs">
+      <DependentUpon>201609031119322_addGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609031122211_addGenre2.cs" />
+    <Compile Include="Migrations\201609031122211_addGenre2.Designer.cs">
+      <DependentUpon>201609031122211_addGenre2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -277,6 +289,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609021104312_ChangeName.resx">
       <DependentUpon>201609021104312_ChangeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609031109355_addGenre.resx">
+      <DependentUpon>201609031109355_addGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609031119322_addGenre1.resx">
+      <DependentUpon>201609031119322_addGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609031122211_addGenre2.resx">
+      <DependentUpon>201609031122211_addGenre2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

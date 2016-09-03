@@ -49,6 +49,24 @@ namespace Vidly.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult Save(Movies movie)
+        {
+            
+            
+                movie.DateAdd = DateTime.Now;
+                _context.Movies.Add(movie);
+            
+            //else
+            //{
+            //    var customerDb = _context.Customers.Single(c => c.Id == movie.Id);
+                
+            //}
+            _context.SaveChanges();
+            return RedirectToAction("Index","Movies");
+        }
+
+
     }
    
 
