@@ -42,24 +42,36 @@ namespace Vidly.Controllers
         {
             var membershiptype = _context.MembershipType.ToList();
 
-            var ViewModel = new NewCustomerViewModel() {
+            var ViewModel = new CustomerFormViewModel() {
                 MembershipTypes = membershiptype
             };
-            return View(ViewModel);
+            return View("CustomerFrom",ViewModel);
         }
 
 
         [HttpPost]
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-
-            return View();
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else {
+                var customerDb = _context.Customers.Single(c => c.Id == customer.Id);
+                customerDb.Name = customer.Name;
+                customerDb.Birthday = customer.Birthday;
+                customerDb.MembershipeTypeId= customer.MembershipeTypeId;
+                customerDb.IsSubscribedToLettler = customer.IsSubscribedToLettler;
+            }
+           
+            _context.SaveChanges();
+            return RedirectToAction("Index","Customers");
         }
 
 
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.Include(c => c.MembershipeType).SingleOrDefault(c => c.Id == id); ;
+            var customer = _context.Customers.Include(c => c.MembershipeType).SingleOrDefault(c => c.Id == id); 
 
             if (customer == null)
                 return HttpNotFound();
@@ -67,6 +79,21 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer == null) {
+                return HttpNotFound();
+            }
 
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipType.ToList()
+
+            };
+
+            return View("CustomerForm",viewModel);
+        }
     }
 }
