@@ -49,6 +49,14 @@ namespace Vidly.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+
+            return View();
+        }
+
+
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipeType).SingleOrDefault(c => c.Id == id); ;
