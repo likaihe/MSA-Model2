@@ -71,17 +71,16 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(MovieFormViewModel movie)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new MovieFormViewModel
+            //    {
+            //        Movies = movie.Movies,
+            //        Gener = _context.Genre
+            //    };
 
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new MovieFormViewModel
-                {
-                    Movies = movie.Movies,
-                   Gener = _context.Genre
-                };
-
-                return View("MovieForm", viewModel);
-            }
+            //    return View("MovieForm", viewModel);
+            //}
 
             if (movie.Movies.Id == 0)
             {
@@ -99,6 +98,9 @@ namespace Vidly.Controllers
                 Moviedb.NumberInStock = movie.Movies.NumberInStock;
 
             }
+
+           
+
 
 
             _context.SaveChanges();

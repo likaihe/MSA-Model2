@@ -189,29 +189,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609020422395_init.cs" />
-    <Compile Include="Migrations\201609020422395_init.Designer.cs">
-      <DependentUpon>201609020422395_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609021104312_ChangeName.cs" />
-    <Compile Include="Migrations\201609021104312_ChangeName.Designer.cs">
-      <DependentUpon>201609021104312_ChangeName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609031109355_addGenre.cs" />
-    <Compile Include="Migrations\201609031109355_addGenre.Designer.cs">
-      <DependentUpon>201609031109355_addGenre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609031119322_addGenre1.cs" />
-    <Compile Include="Migrations\201609031119322_addGenre1.Designer.cs">
-      <DependentUpon>201609031119322_addGenre1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609031122211_addGenre2.cs" />
-    <Compile Include="Migrations\201609031122211_addGenre2.Designer.cs">
-      <DependentUpon>201609031122211_addGenre2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609031155048_addGenre3.cs" />
-    <Compile Include="Migrations\201609031155048_addGenre3.Designer.cs">
-      <DependentUpon>201609031155048_addGenre3.cs</DependentUpon>
+    <Compile Include="Migrations\201609051401484_init.cs" />
+    <Compile Include="Migrations\201609051401484_init.Designer.cs">
+      <DependentUpon>201609051401484_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,23 +290,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609020422395_init.resx">
-      <DependentUpon>201609020422395_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609021104312_ChangeName.resx">
-      <DependentUpon>201609021104312_ChangeName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609031109355_addGenre.resx">
-      <DependentUpon>201609031109355_addGenre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609031119322_addGenre1.resx">
-      <DependentUpon>201609031119322_addGenre1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609031122211_addGenre2.resx">
-      <DependentUpon>201609031122211_addGenre2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609031155048_addGenre3.resx">
-      <DependentUpon>201609031155048_addGenre3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609051401484_init.resx">
+      <DependentUpon>201609051401484_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
