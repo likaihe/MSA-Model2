@@ -11,12 +11,14 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Movies.Name)
         @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Movies.Name)
     </div>
 
 
     <div class="form-group">
         @Html.LabelFor(m => m.Movies.ReleaseDate)
         @Html.TextBoxFor(m => m.Movies.ReleaseDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Movies.ReleaseDate)
     </div>
 
     <div class="form-group">
