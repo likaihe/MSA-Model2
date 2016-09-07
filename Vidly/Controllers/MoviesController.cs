@@ -69,21 +69,21 @@ namespace Vidly.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Save(MovieFormViewModel movie)
         {
 
-            
-            //if (!ModelState.IsValid)
-            //{
-            //    var viewModel = new MovieFormViewModel
-            //    {
-            //        Movies = movie.Movies,
-            //        Gener = _context.Genre
-            //    };
 
-            //    return View("MovieForm", viewModel);
-            //}
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movies = movie.Movies,
+                    Gener = _context.Genre
+                };
+
+                return View("MovieForm", viewModel);
+            }
 
             if (movie.Movies.Id == 0)
             {

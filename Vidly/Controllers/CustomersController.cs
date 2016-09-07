@@ -43,24 +43,24 @@ namespace Vidly.Controllers
                 MembershipTypes = membershiptype,
 
             };
-            return View("CustomerFrom", ViewModel);
+            return View("CustomerForm", ViewModel);
         }
 
-
+       [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
 
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new CustomerFormViewModel
-                {
-                    Customer = customer,
-                    MembershipTypes = _context.MembershipType
-                };
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new CustomerFormViewModel
+            //    {
+            //        Customer = customer,
+            //        MembershipTypes = _context.MembershipType
+            //    };
 
-                return View("CustomerForm", viewModel);
-            }
+            //    return View("CustomerForm", viewModel);
+            //}
 
             if (customer.Id == 0)
             {
