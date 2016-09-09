@@ -1,44 +1,39 @@
 ﻿@{
     Layout = "~/Views/Shared/LayoutForHomePage.cshtml";
     ViewBag.Title = "Home Page";
+
 }
 
 
+
 <div>
-    <img src="https://cdn.eventcinemas.co.nz/cdn/resources/movies/9620/images/skin.jpg" alt="head" />
+    <img id="movieimg"/>
 </div>
 
 <div class="container body-content">
 
 
-    <div class="jumbotron">
-        <h1>HLKahahah</h1>
-
+    <div id="demo" class="jumbotron">
+        <h1>Demonstration Of Simple Typescript</h1>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <button class="btn btn-lg btn-primary" style="background-color:powderblue" value="SuicideSquad" onclick="Showimg(this.value)">Suicide Squad</button>
         </div>
+
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            <button class="btn btn-lg btn-primary" style="background-color:wheat" value="BadMom" onclick="Showimg(this.value)">Bad Mom</button>
         </div>
+
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <button class="btn btn-lg btn-primary" style="background-color:black" value="SausageParty" onclick="Showimg(this.value)">Sausage Party</button>
         </div>
     </div>
-
-
+ 
 </div>
+@section scripts{   
+    <script src="~/Scripts/test.js"></script>
+    }
 
 
