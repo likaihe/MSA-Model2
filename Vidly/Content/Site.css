@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+  
     padding-bottom: 20px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+
 select,
 textarea {
     max-width: 280px;
@@ -30,6 +30,24 @@ color:red;
 
 .input-validation-error {
 border: 2px solid red;
+}
+
+.button{
+background-color:crimson;
+    color: azure;
+    padding: 17px 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid crimson;
+    font-size: 12px;
+    float:left;
+    border-radius: 999px;
+}
+
+.button:hover{
+    background-color: white;
+    border: 2px solid crimson;
+    text-decoration:none;
 }
 
 /*Header*/
@@ -96,6 +114,7 @@ input{
 
 .user-info li:nth-child(3){
     float: right;
+     margin-right: 10%;
 }
 
 .user-info li:nth-child(3) img{
@@ -116,6 +135,7 @@ input{
 .user-info li:nth-child(3) a {
     font-weight: 700;
     color: crimson;
+   
 }
 
 .username{

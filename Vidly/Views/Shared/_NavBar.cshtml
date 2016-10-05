@@ -18,61 +18,58 @@
         </div>
 
     </div>*@
-<link href="~/Content/font-awesome.min.css" rel="stylesheet">
-<link href="~/Content/font-awesome.css" rel="stylesheet">
-<header>
-    <div class="body-content">
+
+    <header >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+
+
+                    <a href="#"><img src="~/images/logo.png" class="logo"></a>
+                    <a href="#" id="menu-toggle">
+                        <img src="~/images/menu.png">
+                    </a>
+                </div>
+
+
+                <div class="col-md-5">
+                    <form><input placeholder="Type to search..." type="text"></form>
+                </div>
+
+                <div class="col-md-5">
+                    <ul class="user-info">
+                        <li><a href="#" class="button">Upload</a></li>
+                        <li>
+                            <ul class="notifications">
+                                <li></li>
+                                <li></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="~/images/profile.png">
+                            @Html.Partial("_LoginPartial")
+                           
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <hr>
+
+    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-md-2">
 
-
-                <a href="#"><img src="images/logo.png" class="logo"></a>
-                <a href="#" id="menu-toggle">
-                    <img src="images/menu.png">
-                </a>
-            </div>
-
-
-            <div class="col-md-5">
-                <form><input placeholder="Type to search..." type="text"></form>
-            </div>
-
-            <div class="col-md-5">
-                <ul class="user-info">
-                    <li><a href="#" class="button">Upload</a></li>
-                    <li>
-                        <ul class="notifications">
-                            <li><i class="fa fa-envelope"></i><span>1</span></li>
-                            <li><i class="fa fa-bell"></i><span>3</span></li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="images/profile.png">
-                        <div>
-                            <p class="username">Hesham Emara</p>
-                            <p>9 subscribers</p>
-                            <a href="#">Log out</a>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-
+            <ul class="tabs">
+                <li class="active">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
+                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+            </ul>
         </div>
     </div>
-</header>
-<hr>
 
-<div class="container-fluid">
-
-    <div class="row">
-
-        <ul class="tabs">
-            <li class="active">Home</li>
-            <li>Trending</li>
-            <li>Subscriptions</li>
-        </ul>
-    </div>
-</div>
-<hr>
+    <hr>
