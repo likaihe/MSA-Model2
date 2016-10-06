@@ -5,6 +5,19 @@
 }
 
 
+<div class="container-fluid">
+
+    <div class="row">
+
+        <ul id="tabs" class="tabs">
+            <li class="active" onmouseover="TabsHover(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
+            <li onmouseover="TabsHover(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
+            <li onmouseover="TabsHover(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
+        </ul>
+    </div>
+</div>
+
+<hr>
 
 <div>
     <img  class="col-xs-12" id="movieimg"/>
@@ -32,8 +45,6 @@
     </div>
  
 </div>
-@section scripts{   
-    <script src="~/Scripts/test.js"></script>
-    }
+
 
 

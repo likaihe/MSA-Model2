@@ -31,4 +31,10 @@ function Showimg(value) {
     removedemo();
 }
 
+//function TabsHover(t) {
+//   // document.getElementsByClassName("active")[0].
+//    t.setAttribute('class', 'active'); 
+   
+//}
+
 

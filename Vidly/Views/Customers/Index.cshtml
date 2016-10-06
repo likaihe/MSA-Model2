@@ -7,6 +7,20 @@
 }
 
 
+<div class="container-fluid">
+
+    <div class="row">
+
+        <ul id="tabs" class="tabs">
+            <li  onmouseover="TabsHover(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
+            <li class="active" onmouseover="TabsHover(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
+            <li onmouseover="TabsHover(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
 <h2>Customers</h2>
 <table id="customers" class="table table-bordered table-hover">
     <thead>
