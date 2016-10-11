@@ -1,12 +1,12 @@
 ﻿td {
     border: 1px solid black;
-    border-collapse: collapse;
-    padding: 15px;
+    padding: 50px;
 }
 
 table {
     border-spacing: 50px;
 }
+
 
 /* Main Content */
 
@@ -109,4 +109,17 @@ p.views {
     cursor: pointer;
     border: 1px solid black;
     
+}
+
+#movieList {
+   position: absolute;  
+   left:40%; top:-20px
+  
+    
+}
+
+#closeTable {
+position:absolute;
+right:0;
+
 }

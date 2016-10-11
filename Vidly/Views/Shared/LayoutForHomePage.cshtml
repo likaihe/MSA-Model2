@@ -7,26 +7,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application2</title>
+   
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <!-- Font Awesome Icons -->
     
-
-
-    @* Homepage js *@
-    <script src="~/Scripts/homePage.js"></script>
-
-    @* Jquery ui *@
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
+   
     @* Homepage css *@
     <link href="~/Content/HomePage.css" rel="stylesheet">
+
+
+    
+    
+
+    
+   
 </head>
 <body>
     @Html.Partial("_NavBar")
 
-
+    
 
     @RenderBody()
     <hr />
@@ -38,7 +38,9 @@
 
  @Scripts.Render("~/bundles/lib")
  @RenderSection("scripts", required: false)
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
  <script src="~/Scripts/test.js"></script>
+ <script src="~/Scripts/homePage.js"></script>
    
 </body>
 </html>
