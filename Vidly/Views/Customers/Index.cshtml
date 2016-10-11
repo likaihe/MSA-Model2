@@ -12,9 +12,9 @@
     <div class="row">
 
         <ul id="tabs" class="tabs">
-            <li  onmouseover="TabsHover(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
-            <li class="active" onmouseover="TabsHover(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
-            <li onmouseover="TabsHover(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
+            <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
+            <li class="active" onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
+            <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
         </ul>
     </div>
 </div>

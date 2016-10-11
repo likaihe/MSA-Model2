@@ -10,9 +10,9 @@
     <div class="row">
 
         <ul id="tabs" class="tabs">
-            <li class="active" onmouseover="TabsHover(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
-            <li onmouseover="TabsHover(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
-            <li onmouseover="TabsHover(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
+            <li class="active">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
+            <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
+            <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
         </ul>
     </div>
 </div>
@@ -20,7 +20,7 @@
 <hr>
 
 <div>
-    <img  class="col-xs-12" id="movieimg"/>
+    <img class="col-xs-12" id="movieimg" />
 </div>
 
 <div class="container body-content">
@@ -43,7 +43,94 @@
             <button class="btn btn-lg btn-primary" style="background-color:black" value="SausageParty" onclick="Showimg(this.value)">Sausage Party</button>
         </div>
     </div>
- 
+
+   </div> 
+    <hr />
+
+<div class="container-fluid">
+    <div class="row">
+
+
+        <hr>
+
+        <div class="main-videos">
+            <div class="col-md-2 ">
+                <h2>Hot</h2>
+                <ul>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-2 video">
+
+                <div class="area">
+                    <div class="mask ">
+
+                        <div class="vertical-align ">
+                            <i class="fa fa-eye"></i>
+                            <p>See More</p>
+                        </div> <!-- End Vertical Align -->
+
+                    </div> <!-- End Mask / Hover -->
+
+                    <img src="https://i.ytimg.com/vi/PPyPVMHLUSM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=euYB4u39HTBnTlVaGMTGVe85SWw" alt="video" class="img-responsive  " height="900x">
+                    <span class="duration">44:03</span>
+
+                </div> <!-- End Area -->
+
+                <h4>West Super Bowl 2015</h4>
+                <p><span>9 Days Ago</span> By <a href="#">Know More</a> Action</p>
+                <button class="hiden-button upload-info">Upload</button>
+
+            </div> <!-- End Col-md-2 -->
+
+
+
+
+        </div> <!-- End Main Videos -->
+
+    </div> <!-- End Row -->
+</div> <!-- End Container-Fluid -->
+
+<div class="hidden-table table-movie" id="">
+    <h2>MovieList</h2>
+    <button id="closeTable" type="button" class="btn btn-info">Close</button>
+    <table>
+
+        <tr>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+        </tr>
+
+        <tr>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+            <td><p class="chooseable">Harry Pottery</p></td>
+        </tr>
+
+        <tr>
+            <td><p class="chooseable">s</p></td>
+            <td><p class="chooseable">s</p></td>
+            <td><p class="chooseable">sss</p></td>
+            <td><p class="chooseable">ssssssssssssssss</p></td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
+
+<hr>
+
+
 </div>
 
 
