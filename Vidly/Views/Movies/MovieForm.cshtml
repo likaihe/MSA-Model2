@@ -8,31 +8,61 @@
 
 @using (Html.BeginForm("Save", "Movies"))
 {
-    <div class="form-group">
-        @Html.LabelFor(m => m.Movies.Name)
-        @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Movies.Name)
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.Name)
+                @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Movies.Name)
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.ReleaseDate)
+                @Html.TextBoxFor(m => m.Movies.ReleaseDate, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Movies.ReleaseDate)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.GenreId)
+                @Html.DropDownListFor(m => m.Movies.GenreId, new SelectList(Model.Gener, "Id", "Name"), "Select Mebership Type", new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.NumberInStock)
+                @Html.TextBoxFor(m => m.Movies.NumberInStock, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Movies.PicUrl)
+                        @Html.TextBoxFor(m => m.Movies.PicUrl, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-1">                           
+                    <button id="checkButton" type="button" class="upload-info" onclick="CheckPic()">Check</button>
+                </div>
+
+                <div class="col-md-6">
+                    <img id="imgView" src="" alt="picture" class="img-responsive">
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Movies.ReleaseDate)
-        @Html.TextBoxFor(m => m.Movies.ReleaseDate, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Movies.ReleaseDate)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.Movies.GenreId)
-        @Html.DropDownListFor(m => m.Movies.GenreId, new SelectList(Model.Gener, "Id", "Name"), "Select Mebership Type", new { @class = "form-control" })
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.Movies.NumberInStock)
-        @Html.TextBoxFor(m => m.Movies.NumberInStock, new { @class = "form-control" })
-    </div>
 
 
-    @Html.HiddenFor(m => m.Movies.Id)
-    <button type="submit" class="btn btn-primary">Save</button>
+
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
 }
 

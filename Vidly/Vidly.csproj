@@ -184,6 +184,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomerController.cs" />
+    <Compile Include="Controllers\Api\MovieController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -195,6 +196,14 @@
     <Compile Include="Migrations\201609051401484_init.cs" />
     <Compile Include="Migrations\201609051401484_init.Designer.cs">
       <DependentUpon>201609051401484_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610112206219_test.cs" />
+    <Compile Include="Migrations\201610112206219_test.Designer.cs">
+      <DependentUpon>201610112206219_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610112214140_picurl.cs" />
+    <Compile Include="Migrations\201610112214140_picurl.Designer.cs">
+      <DependentUpon>201610112214140_picurl.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -480,6 +489,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609051401484_init.resx">
       <DependentUpon>201609051401484_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610112206219_test.resx">
+      <DependentUpon>201610112206219_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610112214140_picurl.resx">
+      <DependentUpon>201610112214140_picurl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
     ViewBag.Title = "Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    //<script src="~/Scripts/test.js"></script>
+    
 }
 
 
@@ -13,7 +13,7 @@
 
         <ul id="tabs" class="tabs">
             <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Likai's cinema", "Index", "Home")</li>
-            <li class="active" onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Customers", "Index", "Customers")</li>
+            <li class="active">@Html.ActionLink("Customers", "Index", "Customers")</li>
             <li onmouseover="TabsHover(this)" onmouseout="TabsOut(this)">@Html.ActionLink("Movies", "Index", "Movies")</li>
         </ul>
     </div>
@@ -36,7 +36,7 @@
             {
             <tr>
                 <td>@Html.ActionLink(@customer.Name, "Edit", "Customers", new { id = customer.Id }, null)</td>
-                <td>@customer.MembershipeType.Name</td>
+                <td>@customer.MembershipeType.Name id: @customer.Id</td>
                 <td>
                     <button customerid="@customer.Id" class="btn-link js-delete" id="js-delete">Delete</button>
 

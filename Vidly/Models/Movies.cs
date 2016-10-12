@@ -13,6 +13,7 @@ namespace Vidly.Models
         public DateTime ReleaseDate { get; set; }
         public DateTime DateAdd { get; set; }
         public int NumberInStock { get; set; }
+        public string PicUrl { get; set; }
 
         public Genre Genre { get; set; }
         [Required]
