@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <img id="imgView" src="" alt="picture" class="img-responsive">
+                    <img id="imgView" src= @Model.Movies.PicUrl alt="picture" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
 
 
 
-
+    @Html.HiddenFor(m => m.Movies.Id)
         <button type="submit" class="btn btn-primary">Save</button>
 }
 
