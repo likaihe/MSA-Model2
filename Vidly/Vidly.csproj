@@ -418,6 +418,7 @@
     <Content Include="Scripts\DataTables\responsive.foundation.min.js" />
     <Content Include="Scripts\DataTables\responsive.jqueryui.js" />
     <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
+    <Content Include="Scripts\faceBookFunc.js" />
     <Content Include="Scripts\homePage.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -480,6 +481,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\LayoutForHomePage.cshtml" />
     <Content Include="Views\Shared\LayoutForHomePage - Copy.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
