@@ -83,7 +83,9 @@
                 <h4>West Super Bowl 2015</h4>
                 <p><span>9 Days Ago</span> By <a href="#">Know More</a> Action</p>
                  
-                <button class="hiden-button upload-info">Upload</button>
+                @*<button class="hiden-button upload-info">Upload</button>*@
+                <button type="button" class="btn btn-info btn-lg upload-info" 
+                        data-toggle="modal" data-target="#myModal">Open Modal</button>
 
             </div> <!-- End Col-md-2 -->
 
@@ -187,29 +189,47 @@
     </div> <!-- End Row -->
 </div> <!-- End Container-Fluid -->
 
-<div class="hidden-table table-movie" id="">
-    <div>
-        <h2 id="movieList">MovieList</h2>
-        <button id="closeTable" type="button" class="btn btn-info">Close</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Movie List</h4>
+
+
+                <!--          table   -->
+
+                <div class="modal-body">
+                    <!--  table-->
+
+                    <table class="table table-striped fixed">
+                        <tbody>
+                            <tr>
+                                @foreach (var movie in Model)
+                                {
+                                    <td><p class="chooseable" data-dismiss="modal" value-url=@movie.PicUrl
+                                           >@movie.Name</p></td>
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <hr />
-
-    <table>
-
-        <tbody>
-            <tr>
-                @foreach (var movie in Model)
-                {
-                    <td><p class="chooseable">@movie.Name</p></td>
-                }
-            </tr>
-        </tbody>
-    </table>
-
-
-
 </div>
+
 
 <hr>
 

@@ -99,6 +99,7 @@ namespace Vidly.Controllers
                 Moviedb.ReleaseDate = movie.Movies.ReleaseDate;
                 Moviedb.GenreId = movie.Movies.GenreId;
                 Moviedb.NumberInStock = movie.Movies.NumberInStock;
+                Moviedb.PicUrl = movie.Movies.PicUrl;
 
             }
 
