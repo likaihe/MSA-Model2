@@ -49,11 +49,14 @@
                 </div>
 
 
-                
+                @*<script>
+                    window.console.log(@Model.Titl;)
+
+                </script>*@
                 <div class="col-md-6">
                     @*@{
                         var url = "";
-                        if () {  url = Model.Movies.PicUrl;}
+                        if (Model.Movies.PicUrl!=null) {  url = Model.Movies.PicUrl;}
                     }*@
                    
                     <img id="imgView" src= "" alt="picture" class="img-responsive">
@@ -69,6 +72,6 @@
 
 
 
-    @Html.HiddenFor(m => m.Movies.Id)
+    @*@Html.HiddenFor(m => m.Movies.Id)*@
                     <button type="submit" class="btn btn-primary">Save</button>
                     }

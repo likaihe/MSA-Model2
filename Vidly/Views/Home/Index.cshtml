@@ -66,14 +66,17 @@
             <div class="col-md-2 video">
 
                 <div class="area">
-                    <div class="mask ">
+                    <a href="">
+                        <div class="mask">
 
-                        <div class="vertical-align ">
-                            <i class="fa fa-eye"></i>
-                            <p>See More</p>
-                        </div> <!-- End Vertical Align -->
+                            <div class="vertical-align ">
+                                <i class="fa fa-eye"></i>
+                                <p>See More</p>
+                            </div> <!-- End Vertical Align -->
 
-                    </div> <!-- End Mask / Hover -->
+                        </div> <!-- End Mask / Hover -->
+                    </a>
+
 
                     <img src="https://i.ytimg.com/vi/PPyPVMHLUSM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=euYB4u39HTBnTlVaGMTGVe85SWw" alt="video" class="img-responsive  " height="900x">
                     <span class="duration">44:03</span>
@@ -82,17 +85,19 @@
 
                 <h4>West Super Bowl 2015</h4>
                 <p><span>9 Days Ago</span> By <a href="#">Know More</a> Action</p>
-                 
+
                 @*<button class="hiden-button upload-info">Upload</button>*@
-                <button type="button" class="btn btn-info btn-lg upload-info" 
-                        data-toggle="modal" data-target="#myModal">Open Modal</button>
+                <button type="button" class="btn btn-info btn-lg upload-info"
+                        data-toggle="modal" data-target="#myModal">
+                    Open Modal
+                </button>
 
             </div> <!-- End Col-md-2 -->
 
             <div class="col-md-2 video">
 
                 <div class="area">
-                    <div class="mask ">
+                    <div class="mask" movie-id="">
 
                         <div class="vertical-align ">
                             <i class="fa fa-eye"></i>
@@ -188,8 +193,6 @@
 
     </div> <!-- End Row -->
 </div> <!-- End Container-Fluid -->
-
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
@@ -211,8 +214,10 @@
                             <tr>
                                 @foreach (var movie in Model)
                                 {
-                                    <td><p class="chooseable" data-dismiss="modal" value-url=@movie.PicUrl
-                                           >@movie.Name</p></td>
+                                    <td>
+                                        <p class="chooseMovie" data-dismiss="modal" value-url=@movie.PicUrl
+                                           value-id=@movie.Id>@movie.Name</p>
+                                    </td>
                                 }
                             </tr>
                         </tbody>
