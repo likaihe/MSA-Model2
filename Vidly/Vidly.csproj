@@ -243,6 +243,14 @@
     <Compile Include="Migrations\201610290828118_addHomePageMovies5.Designer.cs">
       <DependentUpon>201610290828118_addHomePageMovies5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610290918549_addHomePageMovies6.cs" />
+    <Compile Include="Migrations\201610290918549_addHomePageMovies6.Designer.cs">
+      <DependentUpon>201610290918549_addHomePageMovies6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290923447_addHomePageMovies7.cs" />
+    <Compile Include="Migrations\201610290923447_addHomePageMovies7.Designer.cs">
+      <DependentUpon>201610290923447_addHomePageMovies7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -251,7 +259,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
-    <Compile Include="Models\MoreThan18.cs" />
     <Compile Include="Models\Movies.cs" />
     <Compile Include="Models\Rental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -517,9 +524,7 @@
     <Content Include="Views\Shared\LayoutForHomePage - Copy.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial - Copy.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -564,6 +569,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610290828118_addHomePageMovies5.resx">
       <DependentUpon>201610290828118_addHomePageMovies5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290918549_addHomePageMovies6.resx">
+      <DependentUpon>201610290918549_addHomePageMovies6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290923447_addHomePageMovies7.resx">
+      <DependentUpon>201610290923447_addHomePageMovies7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

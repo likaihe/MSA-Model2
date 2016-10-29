@@ -1,4 +1,4 @@
-﻿@model List<Vidly.Models.Movies>
+﻿@model Vidly.ViewModels.HomePageViewMode
 @{
     Layout = "~/Views/Shared/LayoutForHomePage.cshtml";
     ViewBag.Title = "Home Page";
@@ -78,7 +78,7 @@
                     </a>
 
 
-                    <img src= @Model.SingleOrDefault(m => m.Id == ) height="900x">
+                    <img src= @Model.Movies.SingleOrDefault(m => m.Id == 14).PicUrl.ToString() alt="video" class="img-responsive  ">
                     <span class="duration">44:03</span>
 
                 </div> <!-- End Area -->
@@ -106,7 +106,7 @@
 
                     </div> <!-- End Mask / Hover -->
 
-                    <img src="https://i.ytimg.com/vi/PPyPVMHLUSM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=euYB4u39HTBnTlVaGMTGVe85SWw" alt="video" class="img-responsive  " height="900x">
+                    <img src="" alt="video" class="img-responsive  " height="900x">
                     <span class="duration">44:03</span>
 
                 </div> <!-- End Area -->
@@ -212,7 +212,8 @@
                     <table class="table table-striped fixed">
                         <tbody>
                             <tr>
-                                @foreach (var movie in Model)
+                                
+                                @foreach (var movie in Model.Movies)
                                 {
                                     <td>
                                         <p class="chooseMovie" data-dismiss="modal" value-url=@movie.PicUrl
@@ -220,6 +221,7 @@
                                     </td>
                                 }
                             </tr>
+
                         </tbody>
                     </table>
 

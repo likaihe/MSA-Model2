@@ -8,8 +8,8 @@ namespace Vidly.ViewModels
 {
     public class HomePageViewMode
     {
-        public Movies Movies { set; get; }
-        //public HomePageMovies Display { set; get; }
+        public List<Movies> Movies { set; get; }
+        public HomePageMovies HomePageMovies { set; get; }
     }
    
    

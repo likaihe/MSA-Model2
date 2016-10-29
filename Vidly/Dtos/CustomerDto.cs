@@ -16,7 +16,7 @@ namespace Vidly.Dtos
         public string Name { set; get; }
 
 
-        [MoreThan18]
+        //[MoreThan18]
         public DateTime? Birthday { set; get; }
 
         public bool IsSubscribedToLettler { get; set; }
