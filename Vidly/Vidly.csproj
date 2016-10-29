@@ -211,10 +211,43 @@
     <Compile Include="Migrations\201610160220135_addRental.Designer.cs">
       <DependentUpon>201610160220135_addRental.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610290755161_addHomePageMovies.cs" />
+    <Compile Include="Migrations\201610290755161_addHomePageMovies.Designer.cs">
+      <DependentUpon>201610290755161_addHomePageMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290759283_addHomePageMovies1.cs" />
+    <Compile Include="Migrations\201610290759283_addHomePageMovies1.Designer.cs">
+      <DependentUpon>201610290759283_addHomePageMovies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290800202_addHomePageMovies2.cs" />
+    <Compile Include="Migrations\201610290800202_addHomePageMovies2.Designer.cs">
+      <DependentUpon>201610290800202_addHomePageMovies2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290803081_testDeletDatetime.cs" />
+    <Compile Include="Migrations\201610290803081_testDeletDatetime.Designer.cs">
+      <DependentUpon>201610290803081_testDeletDatetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290804256_testpass.cs" />
+    <Compile Include="Migrations\201610290804256_testpass.Designer.cs">
+      <DependentUpon>201610290804256_testpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290809404_addHomePageMovies3.cs" />
+    <Compile Include="Migrations\201610290809404_addHomePageMovies3.Designer.cs">
+      <DependentUpon>201610290809404_addHomePageMovies3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290818391_addHomePageMovies4.cs" />
+    <Compile Include="Migrations\201610290818391_addHomePageMovies4.Designer.cs">
+      <DependentUpon>201610290818391_addHomePageMovies4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610290828118_addHomePageMovies5.cs" />
+    <Compile Include="Migrations\201610290828118_addHomePageMovies5.Designer.cs">
+      <DependentUpon>201610290828118_addHomePageMovies5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\HomePageMovies.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -224,6 +257,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewMode.cs" />
     <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -506,6 +540,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610160220135_addRental.resx">
       <DependentUpon>201610160220135_addRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290755161_addHomePageMovies.resx">
+      <DependentUpon>201610290755161_addHomePageMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290759283_addHomePageMovies1.resx">
+      <DependentUpon>201610290759283_addHomePageMovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290800202_addHomePageMovies2.resx">
+      <DependentUpon>201610290800202_addHomePageMovies2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290803081_testDeletDatetime.resx">
+      <DependentUpon>201610290803081_testDeletDatetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290804256_testpass.resx">
+      <DependentUpon>201610290804256_testpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290809404_addHomePageMovies3.resx">
+      <DependentUpon>201610290809404_addHomePageMovies3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290818391_addHomePageMovies4.resx">
+      <DependentUpon>201610290818391_addHomePageMovies4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610290828118_addHomePageMovies5.resx">
+      <DependentUpon>201610290828118_addHomePageMovies5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
