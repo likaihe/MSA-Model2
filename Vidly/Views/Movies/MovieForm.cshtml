@@ -14,7 +14,9 @@
                 @Html.LabelFor(m => m.Movies.Name)
                 @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.Movies.Name)
+               
             </div>
+
 
 
             <div class="form-group">
@@ -63,7 +65,7 @@
                 </div>
             </div>
         </div>
-
+       
 
     </div>
 
@@ -72,6 +74,6 @@
 
 
 
-    @*@Html.HiddenFor(m => m.Movies.Id)*@
-                    <button type="submit" class="btn btn-primary">Save</button>
+    @Html.HiddenFor(m => m.Movies.Id)
+                    <button type="submit" class="btn btn-primary">ddd</button>
                     }

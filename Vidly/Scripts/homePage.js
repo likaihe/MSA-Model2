@@ -2,6 +2,7 @@
 $(document).ready(function () {
     var locationElement;
     var movieId;
+    
 
     //dispaly the table and navagate to this pareent's div
     $(".upload-info").click(function () {
@@ -22,9 +23,9 @@ $(document).ready(function () {
         //get the movie's id
         movieId = this.getAttribute("value-id");
 
-        //set the movie's id in mask
-        var mask = locationElement.getElementsByClassName("mask")[0];
-        mask.setAttribute("movie-id", movieId);
+        //set the movie's id in model
+        var model = locationElement.getElementsByClassName("form-control")[0];
+        model.setAttribute("value", movieId);
 
         // set the href prop in <a>
         var aTag = locationElement.getElementsByTagName("a")[0];

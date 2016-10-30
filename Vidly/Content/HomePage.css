@@ -123,3 +123,7 @@ right:0;
 .table-movie hr {
     margin-top:40px !important;
     }
+
+.form-control {
+display: none;
+}

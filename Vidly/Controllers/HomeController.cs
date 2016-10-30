@@ -51,5 +51,24 @@ namespace Vidly.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult Save(HomePageViewMode model)
+        {
+            var MovieIddb = _context.HomepageMovies.SingleOrDefault(m => m.Id==1);
+            //change the movieId
+           MovieIddb.Movie1 = model.HomePageMovies.Movie1;
+
+
+
+
+
+
+
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
