@@ -251,8 +251,13 @@
     <Compile Include="Migrations\201610290923447_addHomePageMovies7.Designer.cs">
       <DependentUpon>201610290923447_addHomePageMovies7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610310759282_addComent.cs" />
+    <Compile Include="Migrations\201610310759282_addComent.Designer.cs">
+      <DependentUpon>201610310759282_addComent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\HomePageMovies.cs" />
@@ -576,6 +581,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610290923447_addHomePageMovies7.resx">
       <DependentUpon>201610290923447_addHomePageMovies7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610310759282_addComent.resx">
+      <DependentUpon>201610310759282_addComent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

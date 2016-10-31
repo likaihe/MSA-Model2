@@ -51,7 +51,9 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int Id)
         {
-            var movie = _context.Movies.Single(m => m.Id == Id);
+            var movie = _context.Movies.Include(c => c.Comment).Single(m => m.Id == Id);
+            
+           
             if (movie == null)
             {
                 return HttpNotFound();
@@ -61,6 +63,7 @@ namespace Vidly.Controllers
             {
                 Movies = movie,
                 Gener = _context.Genre,
+                //Comment = comment,
                 Title = "Edit Movie"
             };
 

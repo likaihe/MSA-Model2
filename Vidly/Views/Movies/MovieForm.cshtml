@@ -14,7 +14,7 @@
                 @Html.LabelFor(m => m.Movies.Name)
                 @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.Movies.Name)
-               
+
             </div>
 
 
@@ -49,23 +49,28 @@
                 <div class="col-md-1">
                     <button id="checkButton" type="button" class="upload-info" onclick="CheckPic()">Check</button>
                 </div>
-
-
-                @*<script>
-                    window.console.log(@Model.Titl;)
-
-                </script>*@
                 <div class="col-md-6">
                     @*@{
-                        var url = "";
-                        if (Model.Movies.PicUrl!=null) {  url = Model.Movies.PicUrl;}
-                    }*@
-                   
-                    <img id="imgView" src= "" alt="picture" class="img-responsive">
+                            var url = "";
+                            if (Model.Movies.PicUrl!=null) {  url = Model.Movies.PicUrl;}
+                        }*@
+
+                    <img id="imgView" src="" alt="picture" class="img-responsive">
                 </div>
+                <hr>
+                <div class="col-md-12">
+                    <h2>comment</h2>
+                    @foreach (var comment in Model.Movies.Comment)
+                {
+                        <p>@comment.User : @comment.comment</p>
+                        <a commendid=@comment.Id  id="js-delete">Delete</a>
+
+                    }
+                </div>
+
             </div>
         </div>
-       
+
 
     </div>
 
@@ -75,5 +80,5 @@
 
 
     @Html.HiddenFor(m => m.Movies.Id)
-                    <button type="submit" class="btn btn-primary">ddd</button>
-                    }
+    <button type="submit" class="btn btn-primary">ddd</button>
+}
