@@ -2,7 +2,7 @@
 @{
     Layout = "~/Views/Shared/LayoutForHomePage.cshtml";
     ViewBag.Title = "Home Page";
-
+    
 }
 
 
@@ -69,7 +69,7 @@
                     <input class="form-control" data-val="true" id="HomePageMovies_Movie1" name="HomePageMovies.Movie1" type="text" value=@Model.HomePageMovies.Movie1>
 
                     <div class="area">
-                        <a href="">
+                        <a href='/Movies/Details/@Model.HomePageMovies.Movie1'>
                             <div class="mask" movie-id="">
                                 <div class="vertical-align ">
                                     <i class="fa fa-eye"></i>
@@ -152,9 +152,7 @@
                                 <i class="fa fa-eye"></i>
                                 <p>See More</p>
                             </div> <!-- End Vertical Align -->
-
                         </div> <!-- End Mask / Hover -->
-
                         <img src="https://i.ytimg.com/vi/PPyPVMHLUSM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=euYB4u39HTBnTlVaGMTGVe85SWw" alt="video" class="img-responsive  " height="900x">
                         <span class="duration">44:03</span>
 
@@ -215,7 +213,6 @@
                         <table class="table table-striped fixed">
                             <tbody>
                                 <tr>
-
                                     @foreach (var movie in Model.Movies)
                                     {
                                         <td>
@@ -227,17 +224,13 @@
 
                             </tbody>
                         </table>
-
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
     @*  end the save form*@}

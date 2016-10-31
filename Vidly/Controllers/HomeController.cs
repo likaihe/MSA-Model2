@@ -59,13 +59,7 @@ namespace Vidly.Controllers
             var MovieIddb = _context.HomepageMovies.SingleOrDefault(m => m.Id==1);
             //change the movieId
            MovieIddb.Movie1 = model.HomePageMovies.Movie1;
-
-
-
-
-
-
-
+            //movieId 2,3,4...
 
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");

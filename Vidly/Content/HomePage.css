@@ -17,7 +17,7 @@ white-space: nowrap;}
 
 .video{
    position: relative;
-    
+	
 }
 
 .duration {
@@ -43,7 +43,7 @@ p.views {
 	line-height: inherit;
 }
 .selector{
-    
+	
 }
 
 .area:hover .mask {
@@ -91,27 +91,27 @@ p.views {
 }
 
 .hidden-table{
-    display: none;
+	display: none;
 }
 
 .table-movie{
-    position: absolute;
-    top: 50px;
-    left:400px;
-    background-color:brown;
+	position: absolute;
+	top: 50px;
+	left:400px;
+	background-color:brown;
 }
 
 .table-movie p:hover{
-    cursor: pointer;
-    border: 1px solid black;
-    
+	cursor: pointer;
+	border: 1px solid black;
+	
 }
 
 #movieList {
    position: absolute;  
    left:40%; top:-20px
   
-    
+	
 }
 
 #closeTable {
@@ -121,8 +121,8 @@ right:0;
 }
 
 .table-movie hr {
-    margin-top:40px !important;
-    }
+	margin-top:40px !important;
+	}
 
 .form-control {
 display: none;
