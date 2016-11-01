@@ -60,9 +60,9 @@
                 <hr>
                 <div class="col-md-12">
                     <h2>comment</h2>
-                    @foreach (var comment in Model.Movies.Comment)
+                    @foreach (var comment in Model.Comments)
                 {
-                        <p>@comment.User : @comment.comment</p>
+                        <p>@comment.User : @comment.Comment</p>
                         <a commendid=@comment.Id  id="js-delete">Delete</a>
 
                     }

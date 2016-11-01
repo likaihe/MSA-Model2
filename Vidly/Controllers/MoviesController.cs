@@ -34,6 +34,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int Id)
         {
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
+            var comment = _context.Comments.Where(c => c.Id == Id);
             return View(movie);
         }
 
@@ -51,8 +52,8 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int Id)
         {
-            var movie = _context.Movies.Include(c => c.Comment).Single(m => m.Id == Id);
-            
+            var movie = _context.Movies.Include(m => m.Comments).SingleOrDefault(m => m.Id == Id);
+            var comment = _context.Comments.Where(m => m.MoviesId == Id).ToList();
            
             if (movie == null)
             {
@@ -63,7 +64,7 @@ namespace Vidly.Controllers
             {
                 Movies = movie,
                 Gener = _context.Genre,
-                //Comment = comment,
+                Comments = comment,
                 Title = "Edit Movie"
             };
 

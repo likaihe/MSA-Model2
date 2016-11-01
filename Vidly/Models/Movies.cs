@@ -14,7 +14,8 @@ namespace Vidly.Models
         public DateTime DateAdd { get; set; }
         public int NumberInStock { get; set; }
         public string PicUrl { get; set; }
-        public List<Comment> Comment { get; set; }
+        public List<Comments> Comments { get; set; }
+
         public Genre Genre { get; set; }
         [Required]
         public int GenreId { get; set; }

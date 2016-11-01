@@ -255,9 +255,65 @@
     <Compile Include="Migrations\201610310759282_addComent.Designer.cs">
       <DependentUpon>201610310759282_addComent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611010053291_addForingkeyinComment.cs" />
+    <Compile Include="Migrations\201611010053291_addForingkeyinComment.Designer.cs">
+      <DependentUpon>201611010053291_addForingkeyinComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010057206_addForingkeyinComment1.cs" />
+    <Compile Include="Migrations\201611010057206_addForingkeyinComment1.Designer.cs">
+      <DependentUpon>201611010057206_addForingkeyinComment1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010112465_addForingkeyinComment2.cs" />
+    <Compile Include="Migrations\201611010112465_addForingkeyinComment2.Designer.cs">
+      <DependentUpon>201611010112465_addForingkeyinComment2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010131512_addForingkeyinComment3.cs" />
+    <Compile Include="Migrations\201611010131512_addForingkeyinComment3.Designer.cs">
+      <DependentUpon>201611010131512_addForingkeyinComment3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010207377_deletcomment.cs" />
+    <Compile Include="Migrations\201611010207377_deletcomment.Designer.cs">
+      <DependentUpon>201611010207377_deletcomment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010209153_addComment.cs" />
+    <Compile Include="Migrations\201611010209153_addComment.Designer.cs">
+      <DependentUpon>201611010209153_addComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010218086_deletcomment1.cs" />
+    <Compile Include="Migrations\201611010218086_deletcomment1.Designer.cs">
+      <DependentUpon>201611010218086_deletcomment1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010220181_addComment1.cs" />
+    <Compile Include="Migrations\201611010220181_addComment1.Designer.cs">
+      <DependentUpon>201611010220181_addComment1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010222484_addComment2.cs" />
+    <Compile Include="Migrations\201611010222484_addComment2.Designer.cs">
+      <DependentUpon>201611010222484_addComment2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010224489_deletcomment2.cs" />
+    <Compile Include="Migrations\201611010224489_deletcomment2.Designer.cs">
+      <DependentUpon>201611010224489_deletcomment2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010227019_addComment3.cs" />
+    <Compile Include="Migrations\201611010227019_addComment3.Designer.cs">
+      <DependentUpon>201611010227019_addComment3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010231519_deletcomment3.cs" />
+    <Compile Include="Migrations\201611010231519_deletcomment3.Designer.cs">
+      <DependentUpon>201611010231519_deletcomment3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010233526_addComments.cs" />
+    <Compile Include="Migrations\201611010233526_addComments.Designer.cs">
+      <DependentUpon>201611010233526_addComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611010234560_addComments1.cs" />
+    <Compile Include="Migrations\201611010234560_addComments1.Designer.cs">
+      <DependentUpon>201611010234560_addComments1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\HomePageMovies.cs" />
@@ -584,6 +640,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610310759282_addComent.resx">
       <DependentUpon>201610310759282_addComent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010053291_addForingkeyinComment.resx">
+      <DependentUpon>201611010053291_addForingkeyinComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010057206_addForingkeyinComment1.resx">
+      <DependentUpon>201611010057206_addForingkeyinComment1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010112465_addForingkeyinComment2.resx">
+      <DependentUpon>201611010112465_addForingkeyinComment2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010131512_addForingkeyinComment3.resx">
+      <DependentUpon>201611010131512_addForingkeyinComment3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010207377_deletcomment.resx">
+      <DependentUpon>201611010207377_deletcomment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010209153_addComment.resx">
+      <DependentUpon>201611010209153_addComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010218086_deletcomment1.resx">
+      <DependentUpon>201611010218086_deletcomment1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010220181_addComment1.resx">
+      <DependentUpon>201611010220181_addComment1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010222484_addComment2.resx">
+      <DependentUpon>201611010222484_addComment2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010224489_deletcomment2.resx">
+      <DependentUpon>201611010224489_deletcomment2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010227019_addComment3.resx">
+      <DependentUpon>201611010227019_addComment3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010231519_deletcomment3.resx">
+      <DependentUpon>201611010231519_deletcomment3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010233526_addComments.resx">
+      <DependentUpon>201611010233526_addComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611010234560_addComments1.resx">
+      <DependentUpon>201611010234560_addComments1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
