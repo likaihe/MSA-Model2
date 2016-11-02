@@ -35,6 +35,7 @@ namespace Vidly.Controllers
         {
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
             var comment = _context.Comments.Where(c => c.MoviesId == Id).ToList();
+            //var user = _context.
             var viewModel = new MovieFormViewModel
             {
                 Movies = movie,

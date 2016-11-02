@@ -1,4 +1,5 @@
 ﻿@model Vidly.ViewModels.MovieFormViewModel
+@using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,13 +8,6 @@
     <link href="@Url.Content("~/Content/MovieDetails.css")" rel="stylesheet" type="text/css" />
 }
 
-<div class="col-md-12">
-    <h2>comment</h2>
-    @foreach (var comment in Model.Comments)
-    {
-        <p>@comment.User : @comment.Comment</p>
-    }
-</div>
 
 
 
@@ -41,21 +35,17 @@
         <!-- Comments Form -->
         <div class="well">
             <h4>Leave a Comment:</h4>
-           
+
             @using (Html.BeginForm("SubmitComment", "Movies"))
             {
                 <div class="form-group">
-                    @Html.LabelFor(m => m.NewComment.Comment, new { @class = "form-control" })
-                    @Html.TextBoxFor(m =>m.NewComment.Comment, new { @class = "form-control" })
+                    @Html.TextBoxFor(m => m.NewComment.Comment, new { @class = "form-control" })
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.NewComment.User, new { @class = "form-control" })
-                    @Html.TextBoxFor(m => m.NewComment.User, new { @class = "form-control" })
-                    <input class="form-control" id="NewComment_MoviesId" name="NewComment.MoviesId" type="text" value=@Model.Movies.Id>
-                </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <input class="form-control" id="NewComment_User" name="NewComment.User" type="text" value=@User.Identity.Name style="display:none">
+                    <input class="form-control" id="NewComment_MoviesId" name="NewComment.MoviesId" type="text" style="display:none" value=@Model.Movies.Id>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
             }
-            
+
         </div>
 
         @Html.HiddenFor(m => m.Movies.Id)
