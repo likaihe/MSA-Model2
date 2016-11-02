@@ -12,5 +12,6 @@ namespace Vidly.ViewModels
         public IEnumerable<Genre> Gener { set; get; }
         public string Title { set; get; }
         public List<Comments> Comments { set; get; }
+        public Comments NewComment { set; get; }
     }
 }

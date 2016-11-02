@@ -34,8 +34,17 @@ namespace Vidly.Controllers
         public ActionResult Details(int Id)
         {
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
-            var comment = _context.Comments.Where(c => c.Id == Id);
-            return View(movie);
+            var comment = _context.Comments.Where(c => c.MoviesId == Id).ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                Movies = movie,
+                Gener = _context.Genre,
+                Comments = comment,
+               
+            };
+
+            
+            return View(viewModel);
         }
 
         public ActionResult NewMovie()
@@ -52,9 +61,11 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int Id)
         {
-            var movie = _context.Movies.Include(m => m.Comments).SingleOrDefault(m => m.Id == Id);
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == Id);
             var comment = _context.Comments.Where(m => m.MoviesId == Id).ToList();
-           
+            var newcomment = _context.Comments.SingleOrDefault(m => m.Id == 0);
+
+
             if (movie == null)
             {
                 return HttpNotFound();
@@ -65,6 +76,7 @@ namespace Vidly.Controllers
                 Movies = movie,
                 Gener = _context.Genre,
                 Comments = comment,
+                NewComment = newcomment,
                 Title = "Edit Movie"
             };
 
@@ -114,7 +126,28 @@ namespace Vidly.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "Movies");
         }
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult SubmitComment(MovieFormViewModel movie)
+        {
+            int movieId = movie.NewComment.MoviesId;
 
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new MovieFormViewModel
+            //    {
+            //        Movies = movie.Movies,
+            //        Gener = _context.Genre,
+            //        Comments = movie.Comments
+            //    };
+
+            //    return View("Details",new { Id = movieId });
+            //}
+
+            _context.Comments.Add(movie.NewComment);
+            _context.SaveChanges();
+            return RedirectToAction("Details", "Movies",new { Id = movieId });
+        }
 
     }
 

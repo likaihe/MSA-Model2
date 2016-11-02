@@ -311,6 +311,10 @@
     <Compile Include="Migrations\201611010234560_addComments1.Designer.cs">
       <DependentUpon>201611010234560_addComments1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611020315436_addAnnotations.cs" />
+    <Compile Include="Migrations\201611020315436_addAnnotations.Designer.cs">
+      <DependentUpon>201611020315436_addAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comments.cs" />
@@ -682,6 +686,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611010234560_addComments1.resx">
       <DependentUpon>201611010234560_addComments1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611020315436_addAnnotations.resx">
+      <DependentUpon>201611020315436_addAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
