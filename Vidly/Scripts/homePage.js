@@ -29,7 +29,7 @@ $(document).ready(function () {
 
         // set the href prop in <a>
         var aTag = locationElement.getElementsByTagName("a")[0];
-        aTag.setAttribute("href", "/Movies/Edit/" + movieId);             
+        aTag.setAttribute("href", "/Movies/Details/" + movieId);             
     });
 
     $(".mask").click(function () {

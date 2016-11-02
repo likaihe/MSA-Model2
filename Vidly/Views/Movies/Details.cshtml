@@ -39,7 +39,7 @@
             @using (Html.BeginForm("SubmitComment", "Movies"))
             {
                 <div class="form-group">
-                    @Html.TextBoxFor(m => m.NewComment.Comment, new { @class = "form-control" })
+                    @Html.TextAreaFor(m => m.NewComment.Comment, new { @class = "form-control", @rows = "3" })
                 </div>
                     <input class="form-control" id="NewComment_User" name="NewComment.User" type="text" value=@User.Identity.Name style="display:none">
                     <input class="form-control" id="NewComment_MoviesId" name="NewComment.MoviesId" type="text" style="display:none" value=@Model.Movies.Id>
@@ -72,7 +72,7 @@
 
 
         <!-- Comment -->
-        <div class="media">
+        @*<div class="media">
             <a class="pull-left" href="#">
                 <img class="media-object" src="https://placehold.it/64x64" alt="">
             </a>
@@ -83,7 +83,7 @@
                 </h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 <a>SeeMore</a>
-                <!-- Nested Comment -->
+                 Nested Comment 
                 <div class="media">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="https://placehold.it/64x64" alt="">
@@ -96,7 +96,7 @@
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
 
-                </div>
+                </div>*@
                 <!-- End Nested Comment -->
             </div>
         </div>
