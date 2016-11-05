@@ -15,14 +15,21 @@
 
 
 
-<h2>@Model.Movies.Name</h2>
 
-<ul>
-    <li>Gener: @Model.Movies.Genre.Name</li>
-    <li>Realse Date: @Model.Movies.ReleaseDate.ToShortDateString()</li>
-    <li>Date Add: @Model.Movies.DateAdd.ToShortDateString()</li>
-    <li>Number in stock: @Model.Movies.NumberInStock</li>
-</ul>
+<div class="row">
+    <div class="col-md-7 information">
+        <h2>@Model.Movies.Name</h2>
+        <ul>
+            <li>Type: @Model.Movies.Genre.Name</li>
+            <li>Public Date: @Model.Movies.ReleaseDate.ToShortDateString()</li>
+            <li>Date Add: @Model.Movies.DateAdd.ToShortDateString()</li>
+        </ul>
+    </div>
+    <div >
+        <img class="pic" src=@Model.Movies.PicUrl>
+    </div>
+</div>
+
 
 <hr />
 
@@ -101,7 +108,5 @@
             </div>
         </div>
 
-    </div>
 
-</div>
 <!-- /.row -->
