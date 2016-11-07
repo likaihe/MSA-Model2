@@ -29,7 +29,7 @@ namespace Vidly.Controllers.Api
 
         // Delet/.../id
         [HttpDelete]
-        public void DeleteCustomer(int id)
+        public void DeleteMovie(int id)
         {
             var moviesDb = _context.Movies.SingleOrDefault(c => c.Id == id);
 

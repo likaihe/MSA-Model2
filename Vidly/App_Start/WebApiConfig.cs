@@ -25,7 +25,7 @@ namespace Vidly
             );
 
             config.Routes.MapHttpRoute(
-               name: "DefaultApi",
+               name: "DefaultApiWithAction",
                routeTemplate: "api/{controller}/{action}/{id}",
                defaults: new { id = RouteParameter.Optional }
            );
