@@ -40,5 +40,18 @@ namespace Vidly.Controllers.Api
 
             _context.SaveChanges();
         }
+
+        [HttpDelete]
+        public void DeleteComment(int id)
+        {
+            var commentDb = _context.Comments.SingleOrDefault(c => c.Id == id);
+
+            if (commentDb == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            _context.Comments.Remove(commentDb);
+
+            _context.SaveChanges();
+        }
     }
 }
