@@ -50,57 +50,20 @@
                     <button id="checkButton" type="button" class="upload-info" onclick="CheckPic()">Check</button>
                 </div>
                 <div class="col-md-6">
-                    @*@{
-                            var url = "";
-                            if (Model.Movies.PicUrl!=null) {  url = Model.Movies.PicUrl;}
-                        }*@
+                   
 
                     <img id="imgView" src="" alt="picture" class="img-responsive">
                 </div>
-                <hr>
-                <div class="col-md-12">
-                    <h2>comment</h2>
-                    @foreach (var comment in Model.Comments)
-                {
-                        <div>
-                            <p>@comment.User: @comment.Comment </p>
-                            <a commendid=@comment.Id class="js-delete">Delete</a>
-                        </div>
-                        
 
-                    }
+                
                 </div>
 
             </div>
         </div>
 
 
-    </div>
-    @Html.HiddenFor(m => m.Movies.Id)
+    
+    @*@Html.HiddenFor(m => m.Movies.Id)*@
     <button type="submit" class="btn btn-primary">Save</button>
 }
 
-@section scripts{
-    <script>
-        $(document).ready(function () {
-
-            $(".js-delete").click(function () {
-                var button = $(this)
-                
-                if (confirm("Do you want to delete this comment?")) {
-                            $.ajax({
-                                url: "/api/movie/DeleteComment/" + $(this).attr("commendid"),
-                                method: "DELETE",
-                                success: function () {
-                                    button.parent().remove();
-                                }
-                            });
-                        }
-            })
-
-
-        });
-    </script>
-
-
-}

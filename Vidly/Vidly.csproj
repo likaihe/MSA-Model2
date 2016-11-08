@@ -582,7 +582,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
-    <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\NewMovie.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\View.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />

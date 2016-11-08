@@ -1,8 +1,103 @@
-﻿
+﻿@model Vidly.ViewModels.MovieFormViewModel
 @{
-    ViewBag.Title = "EditMovie";
+    ViewBag.Title = "NewMovie";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>EditMovie</h2>
+<h2>@Model.Title</h2>
 
+@using (Html.BeginForm("Save", "Movies"))
+{
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.Name)
+                @Html.TextBoxFor(m => m.Movies.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Movies.Name)
+
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.ReleaseDate)
+                @Html.TextBoxFor(m => m.Movies.ReleaseDate, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Movies.ReleaseDate)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.GenreId)
+                @Html.DropDownListFor(m => m.Movies.GenreId, new SelectList(Model.Gener, "Id", "Name"), "Select Mebership Type", new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Movies.NumberInStock)
+                @Html.TextBoxFor(m => m.Movies.NumberInStock, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Movies.PicUrl)
+                        @Html.TextBoxFor(m => m.Movies.PicUrl, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button id="checkButton" type="button" class="upload-info" onclick="CheckPic()">Check</button>
+                </div>
+                <div class="col-md-6">
+
+
+                    <img id="imgView" src=@Model.Movies.PicUrl alt="picture" class="img-responsive">
+                </div>
+                <hr>
+                <div class="col-md-12">
+                    <h2>comment</h2>
+                    @foreach (var comment in Model.Comments)
+                {
+                        <div>
+                            <p>@comment.User: @comment.Comment </p>
+                            <a commendid=@comment.Id class="js-delete">Delete</a>
+                            <hr />
+                        </div>
+
+                    }
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    @Html.HiddenFor(m => m.Movies.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            $(".js-delete").click(function () {
+                var button = $(this)
+
+                if (confirm("Do you want to delete this comment?")) {
+                            $.ajax({
+                                url: "/api/movie/DeleteComment/" + $(this).attr("commendid"),
+                                method: "DELETE",
+                                success: function () {
+                                    button.parent().remove();
+                                }
+                            });
+                        }
+            })
+
+
+        });
+    </script>
+
+
+}

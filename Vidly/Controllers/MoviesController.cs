@@ -56,7 +56,7 @@ namespace Vidly.Controllers
                 Gener = genre,
                 Title = "New Movie"
             };
-            return View("MovieForm", viewModel);
+            return View(viewModel);
 
         }
 
@@ -81,7 +81,7 @@ namespace Vidly.Controllers
                 Title = "Edit Movie"
             };
 
-            return View("MovieForm", viewModel);
+            return View(viewModel);
         }
 
 
@@ -99,7 +99,7 @@ namespace Vidly.Controllers
                     Gener = _context.Genre
                 };
 
-                return View("MovieForm", viewModel);
+                return View("NewMovie", viewModel);
             }
 
             if (movie.Movies.Id == 0)
