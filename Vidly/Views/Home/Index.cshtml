@@ -26,30 +26,55 @@
 
 <hr>
 
-<div>
-    <img class="col-xs-12" id="movieimg" />
-</div>
 
-<div class="container body-content">
+<div class="container">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
 
-    <div id="demo" class="jumbotron">
-        <h1>Demonstration Of Simple Typescript</h1>
+            <div class="item active">
+                <img src="https://cdn.eventcinemas.co.nz/cdn/resources/home/banners/209/banner.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://cdn.eventcinemas.co.nz/cdn/resources/home/banners/204/banner.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://cdn.eventcinemas.co.nz/cdn/resources/home/banners/211/banner.jpg" alt="Flower" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Flowers</h3>
+                    <p>Beatiful flowers in Kolymbari, Crete.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://cdn.eventcinemas.co.nz/cdn/resources/home/banners/210/banner.jpg" alt="Flower" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Flowers</h3>
+                    <p>Beatiful flowers in Kolymbari, Crete.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <button class="btn btn-lg btn-primary" style="background-color:powderblue" value="SuicideSquad" onclick="Showimg(this.value)">Suicide Squad</button>
-        </div>
-
-        <div class="col-md-4">
-            <button class="btn btn-lg btn-primary" style="background-color:wheat" value="BadMom" onclick="Showimg(this.value)">Bad Mom</button>
-        </div>
-
-        <div class="col-md-4">
-            <button class="btn btn-lg btn-primary" style="background-color:black" value="SausageParty" onclick="Showimg(this.value)">Sausage Party</button>
-        </div>
-    </div>
 
 </div>
 <hr />
