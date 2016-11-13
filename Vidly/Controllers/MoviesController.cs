@@ -27,8 +27,13 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var movielist = _context.Movies.Include(c => c.Genre).ToList();
-            return View(movielist);
+            if (User.IsInRole("Manager"))
+                return View("Manager");
+            else {
+                var movielist = _context.Movies.Include(c => c.Genre).ToList();
+                return View(movielist);
+            }
+            
         }
 
         public ActionResult Details(int Id)

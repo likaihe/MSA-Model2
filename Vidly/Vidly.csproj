@@ -315,6 +315,10 @@
     <Compile Include="Migrations\201611020315436_addAnnotations.Designer.cs">
       <DependentUpon>201611020315436_addAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611130506299_SeesUsers.cs" />
+    <Compile Include="Migrations\201611130506299_SeesUsers.Designer.cs">
+      <DependentUpon>201611130506299_SeesUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comments.cs" />
@@ -589,6 +593,7 @@
     <Content Include="Views\Shared\LayoutForHomePage.cshtml" />
     <Content Include="Views\Shared\LayoutForHomePage - Copy.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial - Copy.cshtml" />
+    <Content Include="Views\Movies\Manager.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -689,6 +694,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611020315436_addAnnotations.resx">
       <DependentUpon>201611020315436_addAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611130506299_SeesUsers.resx">
+      <DependentUpon>201611130506299_SeesUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
