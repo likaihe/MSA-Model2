@@ -55,14 +55,14 @@ namespace Vidly
             //   consumerSecret: "");
 
             //public
-            //app.UseFacebookAuthentication(
-            //   appId: "154101805036528",
-            //   appSecret: "da513172bfc1369f54f86ea8902d8692");
+            app.UseFacebookAuthentication(
+               appId: "154101805036528",
+               appSecret: "da513172bfc1369f54f86ea8902d8692");
 
             //local server
-            app.UseFacebookAuthentication(
-            appId: "355112911504560",
-            appSecret: "b17fff05a6c9e34dd697733d23bb2449");
+            //app.UseFacebookAuthentication(
+            //appId: "355112911504560",
+            //appSecret: "b17fff05a6c9e34dd697733d23bb2449");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
